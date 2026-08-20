@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f1bce4;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    padding: 24px;
+}
+
+
+.app {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.card {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08);
+
+    padding: 32px;
+}
+
+
+h1 {
+
+    margin: 0 0 20px 0;
+
+    font-size: 24px;
+
+    color: #222;
+
+    text-align: center;
+}
+
+
+label {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #555;
+
+    margin-bottom: 6px;
+
+    margin-top: 14px;
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d7dbe3;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    color: #333;
+
+    background: #f7f8fa;
+}
+
+
+input:focus {
+
+    outline: none;
+
+    border-color: #eb25a9;
+
+    background: #fff;
+}
+
+
+button {
+
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #eb25a9;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+}
+
+
+button:hover {
+
+    background: #d91b99;
+}
+
+
+.error {
+
+    color: #d00000;
+
+    font-size: 13px;
+
+    min-height: 18px;
+
+    margin: 10px 0 0 0;
+
+    text-align: center;
+}
+
+
+.error-campo {
+
+    color: #d00000;
+
+    font-size: 12px;
+
+    margin: 4px 0 0 0;
+}
