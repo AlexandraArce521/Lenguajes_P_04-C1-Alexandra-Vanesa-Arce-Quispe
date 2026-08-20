@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ubicación a través de coordenadas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="card">
+
+            <h1>Ubicación</h1>
+
+            <form id="form-ubicacion">
+
+                <label for="nombre">
+                    Nombre Ubicación
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Nombre Ubicación"
+                    required
+                >
+
+                <p class="error-campo" id="error-nombre"></p>
+
+
+                <label for="latitud">
+                    Latitud
+                </label>
+
+                <input
+                    type="text"
+                    id="latitud"
+                    name="latitud"
+                    placeholder="-16,4090"
+                    required
+                >
+
+                <p class="error-campo" id="error-latitud"></p>
+
+
+                <label for="longitud">
+                    Longitud
+                </label>
+
+                <input
+                    type="text"
+                    id="longitud"
+                    name="longitud"
+                    placeholder="-71,5375"
+                    required
+                >
+
+                <p class="error-campo" id="error-longitud"></p>
+
+
+                <button type="submit" id="btn-abrir">
+                    Abrir Ubicación
+                </button>
+
+            </form>
+
+            <p id="mensaje-error" class="error"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
