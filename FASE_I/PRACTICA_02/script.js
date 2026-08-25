@@ -4,7 +4,7 @@ const mapa = L.map("mapa").setView(
     13
 );
 
-// Agregar OpenStreetMap
+// ++OpenStreetMap
 L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
@@ -15,7 +15,7 @@ L.tileLayer(
 // Crear historial
 const historial = [];
 
-// Variable marcador
+// Variable para el marcador
 let marcador = null;
 
 // Variable para el recorrido
@@ -26,12 +26,73 @@ let recorrido = L.polyline(
     }
 ).addTo(mapa);
 
-// Ubicación en tiempo real
-navigator.geolocation.watchPosition(
-    obtenerUbicacion,
-    errorUbicacion,
-    {
-        enableHighAccuracy: true
+// Variable para controlar el seguimiento
+let seguimiento = null;
+
+// Crear Botones
+const btnIniciar =
+    document.getElementById("btn-iniciar");
+
+const btnDetener =
+    document.getElementById("btn-detener");
+
+const btnLimpiar =
+    document.getElementById("btn-limpiar");
+
+// Iniciar seguimiento
+btnIniciar.addEventListener(
+    "click",
+    function() {
+
+        if (seguimiento === null) {
+
+            seguimiento =
+                navigator.geolocation.watchPosition(
+                    obtenerUbicacion,
+                    errorUbicacion,
+                    {
+                        enableHighAccuracy: true
+                    }
+                );
+
+            document.getElementById("estado").textContent =
+                "Seguimiento iniciado";
+        }
+    }
+);
+
+// Detener seguimiento
+btnDetener.addEventListener(
+    "click",
+    function() {
+
+        if (seguimiento !== null) {
+
+            navigator.geolocation.clearWatch(
+                seguimiento
+            );
+
+            seguimiento = null;
+
+            document.getElementById("estado").textContent =
+                "Seguimiento detenido";
+        }
+    }
+);
+
+// Limpiar historial
+btnLimpiar.addEventListener(
+    "click",
+    function() {
+
+        historial.length = 0;
+
+        recorrido.setLatLngs([]);
+
+        actualizarHistorial();
+
+        document.getElementById("estado").textContent =
+            "Historial limpiado";
     }
 );
 
@@ -49,9 +110,12 @@ function obtenerUbicacion(posicion) {
         longitud
     ];
 
-    console.log(latitud, longitud);
+    console.log(
+        latitud,
+        longitud
+    );
 
-    // Centrar el mapa en la nueva posición
+    // Centrar el mapa
     mapa.setView(
         nuevaPosicion,
         17
@@ -72,7 +136,6 @@ function obtenerUbicacion(posicion) {
     }
 
     // Agregar posición al historial
-
     historial.push(
         nuevaPosicion
     );
@@ -82,18 +145,16 @@ function obtenerUbicacion(posicion) {
         historial
     );
 
-    // Actualiza historial que se ve por pantalla
+    // Actualizar historial
     actualizarHistorial();
-
 
     // Actualizar estado
     document.getElementById("estado").textContent =
         "Ubicación actualizada";
 }
 
-// Mostrar error de ubicación
+// Mostrar error
 function errorUbicacion(err) {
-
     console.error(
         `ERROR(${err.code}): ${err.message}`
     );
@@ -102,7 +163,6 @@ function errorUbicacion(err) {
         "No se pudo obtener la ubicación";
 }
 
-// Mostrar historial
 function actualizarHistorial() {
 
     const contenedor =
