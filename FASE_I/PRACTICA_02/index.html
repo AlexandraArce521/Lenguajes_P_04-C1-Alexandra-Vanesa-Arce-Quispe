@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        
+        <title>Trazo de recorrido de la Ubicación en tiempo real</title>
+        <link rel="stylesheet" href="style.css">
+        <link 
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet/dist/leaflet.css"
+        >
+    </head>
+    <body>
+        <div class="app">
+            <h1>Seguimiento de Ubicación</h1>
+            <p id="estado">
+            Esperando ubicación...
+            </p>
+            
+            <div id="mapa"></div>
+            <h2>Historial de posiciones</h2>
+            <div id = "historial"></div>
+        </div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
