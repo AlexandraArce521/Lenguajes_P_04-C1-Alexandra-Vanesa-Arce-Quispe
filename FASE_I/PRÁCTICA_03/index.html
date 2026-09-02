@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalles de Mi Archivo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+
+        <div class="cargar"></div>
+
+        <p class="cargar-texto" id="loadingText">
+            Cargando
+        </p>
+
+        <div class="barra-progreso">
+            <div class="progreso" id="progress"></div>
+        </div>
+
+    </div>
+
+
+    <main class="contenedor" id="contenido">
+
+        <h1>Detalles de mi archivo</h1>
+
+        <p class="descripcion">
+            Selecciona un archivo o arrástralo hasta el área indicada.
+        </p>
+
+
+        <div class="drop-zone" id="dropZone">
+
+            <div class="icono">Subir Archivo</div>
+
+            <h2>Arrastra tu archivo aquí</h2>
+
+            <p>o</p>
+
+            <label for="fileInput" class="boton">
+                Seleccionar archivo
+            </label>
+
+            <input
+                type="file"
+                id="fileInput"
+                hidden
+            >
+
+        </div>
+
+
+        <div class="informacion" id="informacion">
+
+            <h2>Información del archivo</h2>
+
+            <div class="dato">
+                <strong>Nombre:</strong>
+                <span id="nombreArchivo">-</span>
+            </div>
+
+            <div class="dato">
+                <strong>Tipo:</strong>
+                <span id="tipoArchivo">-</span>
+            </div>
+
+            <div class="dato">
+                <strong>Tamaño:</strong>
+                <span id="tamanoArchivo">-</span>
+            </div>
+
+            <div class="dato">
+                <strong>Última modificación:</strong>
+                <span id="fechaArchivo">-</span>
+            </div>
+
+            <div id="contenidoArchivo" class="contenido-archivo">
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
