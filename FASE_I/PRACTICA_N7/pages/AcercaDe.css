@@ -1,0 +1,71 @@
+
+.acerca {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 7%;
+}
+
+.acerca-intro {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.acerca-intro h1 {
+  color: #172554;
+  font-size: 42px;
+}
+
+.acerca-intro p {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.acerca-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.acerca-card {
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.acerca-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(30, 41, 59, 0.08);
+}
+
+.acerca-icono {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #eeedff;
+  color: #4f46e5;
+  font-weight: 800;
+}
+
+.acerca-card h2 {
+  margin-top: 22px;
+  color: #172554;
+  font-size: 21px;
+}
+
+.acerca-card p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+  .acerca-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
