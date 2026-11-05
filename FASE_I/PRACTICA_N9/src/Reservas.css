@@ -1,0 +1,245 @@
+.reservas-page {
+  padding: 75px 7% 100px;
+  background: #fafbf8;
+}
+
+.reservas-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.reservas-heading h1 {
+  color: #b3218f;
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.reservas-heading p {
+  color: #ae56a3;
+  line-height: 1.8;
+}
+
+.habitaciones-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.habitacion-card {
+  background: #ffffff;
+  border: 1px solid #e9ebe5;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.habitacion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(38, 61, 48, 0.08);
+}
+
+.habitacion-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.habitacion-info {
+  padding: 25px;
+}
+
+.habitacion-info h2 {
+  color: #b3218f;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.habitacion-info p {
+  color: #ae56a3;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.habitacion-detalles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.habitacion-detalles span {
+  color: #737770;
+  font-size: 12px;
+}
+
+.habitacion-detalles strong {
+  color: #ab1385;
+  font-size: 18px;
+}
+
+.seleccionar-btn {
+  width: 100%;
+  padding: 13px;
+
+  border: 1px solid #3d263c;
+  border-radius: 4px;
+
+  background: white;
+  color: #3d263c;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seleccionar-btn:hover,
+.seleccionar-btn.seleccionado {
+  background: #3d263c;
+  color: white;
+}
+
+.formulario-reserva {
+  max-width: 850px;
+  margin: 85px auto 0;
+  padding: 45px;
+
+  background: white;
+  border: 1px solid #e9ebe5;
+  border-radius: 6px;
+}
+
+.formulario-heading {
+  margin-bottom: 35px;
+}
+
+.formulario-heading h2 {
+  color: #3d263c;
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.formulario-heading p {
+  color: #737770;
+  line-height: 1.8;
+}
+
+.formulario-reserva form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.campo-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.campo-reserva label {
+  color: #3d263c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.campo-reserva input,
+.campo-reserva select {
+  width: 100%;
+  padding: 14px;
+
+  border: 1px solid #dfe3db;
+  border-radius: 4px;
+
+  background: white;
+  color: #3d263c;
+  font-size: 14px;
+}
+
+.campo-reserva input:focus,
+.campo-reserva select:focus {
+  outline: 2px solid #b9a0b2;
+}
+
+.resumen-reserva {
+  padding: 25px;
+  background: #f4f5f0;
+  border-radius: 5px;
+}
+
+.resumen-reserva div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 17px;
+}
+
+.resumen-reserva span {
+  color: #777076;
+  font-size: 14px;
+}
+
+.resumen-reserva strong {
+  color: #3d263c;
+  font-size: 14px;
+  text-align: right;
+}
+
+.resumen-reserva .total-reserva {
+  border-top: 1px solid #dfe3db;
+  padding-top: 18px;
+  margin-bottom: 0;
+}
+
+.total-reserva strong {
+  font-size: 25px;
+}
+
+.confirmar-btn {
+  width: 100%;
+  padding: 16px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #3d263d;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirmar-btn:hover {
+  background: #3d263c;
+}
+
+@media (max-width: 750px) {
+  .reservas-page {
+    padding: 55px 5%;
+  }
+
+  .habitaciones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-reserva {
+    margin-top: 60px;
+    padding: 25px 18px;
+  }
+
+  .formulario-heading h2 {
+    font-size: 28px;
+  }
+}

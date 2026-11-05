@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app main {
+  flex: 1;
+}
+
+.footer {
+  padding: 35px 7%;
+  background: #2e202a;
+  color: #ecc2e7;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  font-size: 12px;
+  line-height: 2;
+}
